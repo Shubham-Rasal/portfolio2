@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export async function getStaticPaths() {
+    const res = await Astro.glob("../../data/posts/*.md");
+    return res.map((post) => {
+        return {
+            params: {
+                slug: post.frontmatter.slug,
+            },
+            props : {
+                post
+            }
+        };
+    });
+}
+
+const { Content, frontmatter } = Astro.props.post;
+---
+
+<Layout title={frontmatter.title}>
+    <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+        <h1>The Blog</h1>     
+        <Content />
+    </section>
+</Layout>

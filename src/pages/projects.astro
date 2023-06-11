@@ -1,0 +1,33 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+import { projects } from "../data/project.js";
+type Project = {
+    index: number;
+    title: string;
+    description: string;
+    github: string;
+    live?: string;
+};
+
+//type cast to avoid type errors
+const p: Project[] = projects;
+console.log(p);
+
+
+
+---
+
+<Layout title="Projects">
+    <div class="flex flex-col mt-16 z-50">
+        <h1 class="text-4xl font-bold text-center">
+            Things I've made trying to put my dent in the universe.
+        </h1>
+
+        <div class="flex mt-10 flex-wrap w-full justify-center">
+            {p.map((project) => <Card title={project.title} description={project.description} github={project.github} 
+            live={project.live}  index={project.index}
+            />)}
+        </div>
+    </div>
+</Layout>
