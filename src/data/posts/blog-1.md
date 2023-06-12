@@ -1,19 +1,18 @@
 ---
-title: Blog 1
+title: My first blog post
 slug: blog-1
-date: 2020-01-01 00:00:00
-author: Sitdhibong Laokok
-tags: [blog]
+date: 2022-01-01 
+author: Shubham Rasal
+tags: [self reflection]
 
 ---
 
-# Blog 1
+Today I am writing my first blog post. I am writing this blog post to share my experience of learning new things.
+Future blogs will mostly be related to the following topics:
+- Systems
+- Programming
+- Philosophy
+- My side projects
 
-This is blog 1.
 
-```
-const test = 'test';
-```
-
-water is the most important thing in the world.
 
