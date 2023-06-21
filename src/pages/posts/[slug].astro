@@ -23,14 +23,14 @@ function formatDate(date: string) {
 }
 
 const { Content, frontmatter } = Astro.props.post;
-console.log(Content);
+// console.log(Content);
 ---
 
 <Layout title={frontmatter.title}>
     <article
         class="  px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl text-lg text-slate-300"
     >
-        <button class="my-2 text-teal-400">
+        <button class="my-8 py-8 flex  text-teal-400">
             <a href="/blog"> &larr; Back to blog</a>
         </button>
         <div
