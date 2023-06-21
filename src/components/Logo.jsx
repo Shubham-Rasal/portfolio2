@@ -1,6 +1,6 @@
 import ModelViewer from "@metamask/logo";
 import React, { useEffect, useRef } from "react";
-import foxJson from "./../data/fade.json";
+import foxJson from "../content/fade.json";
 const Logo = () => {
   const container = useRef();
 

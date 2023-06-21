@@ -1,8 +1,7 @@
 ---
-import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 
-const posts = await Astro.glob("../data/posts/*.md");
+const posts = await Astro.glob("../content/posts/*.md");
 
 function formatDate(date: string) {
     const d = new Date(date);
@@ -20,16 +19,16 @@ function formatDate(date: string) {
         <div class="flex mt-10 flex-wrap w-screen justify-start p-4 md:p-12">
             {
                 posts.map((post) => (
-                    <div class="w-full flex justify-between mx-auto  md:p-2 px-2 md:px-12 text-xl font-medium text-teal-400 cursor-pointer hover:underline hover:underline-offset-3 hover:text-teal-500 transition duration-300 ease-in-out">
-                        <span>
+                    <div class="w-full flex  flex-wrap justify-between mx-auto lg:p-1 lg:px-32  md:p-2 px-2 md:px-12 text-base lg:text-xl font-medium text-teal-400 cursor-pointer hover:underline hover:underline-offset-3 hover:text-teal-500 transition duration-300 ease-in-out">
+                        <div class="w-full lg:w-auto">
                             <a href={`/posts/${post.frontmatter.slug}`}>
                                 {post.frontmatter.title}
                             </a>
-                        </span>
-                        <span class="text-gray-500">
+                        </div>
+                        <div class="text-gray-500 text-xs lg:text-base">
                             {" "}
                             {formatDate(post.frontmatter.date)}
-                        </span>
+                        </div>
                     </div>
                 ))
             }
