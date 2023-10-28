@@ -22,8 +22,7 @@ function formatDate(date: string) {
     return res;
 }
 
-const { Content, frontmatter } = Astro.props.post;
-// console.log(Content);
+const {Content , frontmatter} = Astro.props.post;
 ---
 
 <Layout title={frontmatter.title}>

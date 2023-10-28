@@ -1,0 +1,34 @@
+---
+export async function getStaticPaths() {
+    const allPosts = await Astro.glob("../../content/posts/*.md");
+
+    return [
+        { params: { tag: "blockchain" }, props: { posts: allPosts } },
+        { params: { tag: "self reflection" }, props: { posts: allPosts } },
+        { params: { tag: "community" }, props: { posts: allPosts } },
+        { params: { tag: "blogging" }, props: { posts: allPosts } },
+        { params: { tag: "setbacks" }, props: { posts: allPosts } },
+        { params: { tag: "learning in public" }, props: { posts: allPosts } },
+    ];
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post : any) =>
+    post.frontmatter.tags?.includes(tag),
+);
+console.log(filteredPosts);
+---
+
+<p>Posts tagged with {tag}</p>
+<ul>
+    {
+        filteredPosts.map((post : any) => (
+            <li>
+                <a href={`/posts/${post.frontmatter.slug}`}>
+                    {post.frontmatter.title}
+                </a>
+            </li>
+        ))
+    }
+</ul>

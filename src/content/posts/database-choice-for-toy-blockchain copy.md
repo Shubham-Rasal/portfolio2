@@ -1,6 +1,6 @@
 ---
 title: Database choice for toy blockchain in Go
-slug: blog-2
+slug: database-choice-for-toy-blockchain
 date: 2023-06-17 
 author: Shubham Rasal
 tags: [blockchain, go, database]
