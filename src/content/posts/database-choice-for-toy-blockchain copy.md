@@ -12,6 +12,7 @@ In order to provide state persistence, the Ethereum spec defines the use of data
 the 
 For storing the world state of the blockchin (which is just a very large merkel patrichia tree), a highly performant and fast key-value store is required. There are many databases which can be used for this purpose.
 
+
 In this blog post, I will be discussing the database choice for my toy blockchain in Go. I will be discussing the following databases:
 - [BadgerDB](https://dgraph.io/docs/badger/)
 - [etcd](https://etcd.io/)
