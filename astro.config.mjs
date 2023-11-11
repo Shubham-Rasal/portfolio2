@@ -4,6 +4,7 @@ import vercel from '@astrojs/vercel/serverless';
 import react from "@astrojs/react";
 import remarkToc from 'remark-toc';
 import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis';
+import { remarkReadingTime } from './remark-reading-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +17,7 @@ export default defineConfig({
   }),
   markdown: {
     // Applied to .md and .mdx files
-    remarkPlugins: [remarkToc],
+    remarkPlugins: [remarkToc , remarkReadingTime],
     rehypePlugins: [rehypeAccessibleEmojis],
   },
 });

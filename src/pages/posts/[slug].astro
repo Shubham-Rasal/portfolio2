@@ -1,8 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 export async function getStaticPaths() {
-    const res = await Astro.glob("../../content/posts/*.md");
-    return res.map((post) => {
+    const posts = await Astro.glob("../../content/posts/*.md");
+    return posts.map((post) => {
         return {
             params: {
                 slug: post.frontmatter.slug,
@@ -12,6 +12,9 @@ export async function getStaticPaths() {
             },
         };
     });
+
+    //latest first
+
 }
 
 function formatDate(date: string) {
@@ -23,6 +26,7 @@ function formatDate(date: string) {
 }
 
 const {Content , frontmatter} = Astro.props.post;
+const readTime =  frontmatter.minutesRead;
 ---
 
 <Layout title={frontmatter.title}>
@@ -41,8 +45,15 @@ const {Content , frontmatter} = Astro.props.post;
                 {frontmatter.title}
             </h1>
             <p class="text-gray-600">
-                {formatDate(frontmatter.date)}
+                {formatDate(frontmatter.date)} 
             </p>
+
+            <p class="text-gray-600">
+                {readTime} 
+            </p>
+
+
+    
             <div class="flex flex-wrap my-4">
                 {frontmatter.tags.map((tag : any) => (
                     <span class=" text-sm font-bold text-slate-900 mr-2  bg-slate-200 px-2 py-1 rounded-md
