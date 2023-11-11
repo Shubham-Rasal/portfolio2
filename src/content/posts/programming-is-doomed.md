@@ -1,7 +1,7 @@
 ---
 title: Programming is doomed
 slug: programming-is-doomed
-date: 2023-10-11
+date: 2023-11-10
 author: Shubham Rasal
 tags: [programming, ai, philosophy]
 ---
