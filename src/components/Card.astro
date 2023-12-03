@@ -10,9 +10,9 @@ const { title, description, github, live } = Astro.props;
 ---
 
 <div
-	class="box max-w-1/2 rounded-md z-10  p-2 m-3 flex text-start justify-start flex-col"
+	class="box max-w-xl rounded-md z-10  p-2 m-3 flex text-start justify-between flex-col"
 >
-	<div class="content flex justify-start flex-col h-full">
+	<div class="content flex justify-between flex-col h-full">
 		<h1 class="text-2xl font-bold">
 			{title}
 		</h1>
@@ -24,9 +24,9 @@ const { title, description, github, live } = Astro.props;
 	</div>
 
 	<div
-		class="link flex justify-start items-start my-4 text-teal-400 w-full space-x-4"
+		class="link flex justify-center items-center my-4 text-teal-400 w-full space-x-4"
 	>
-		<a href={github} class="link flex justify-start items-center">
+		<a href={github} class="link flex justify-center items-center">
 			<span
 				class="font-semibold text-transparent bg-clip-text bg-gradient-to-br from-teal-400 to-fuchsia-200"
 			>

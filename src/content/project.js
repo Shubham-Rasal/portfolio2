@@ -32,7 +32,7 @@ export const projects = [
  
   {
     index: 3,
-    title: "Multiplayer Doodle Game",
+    title: "dGame",
 
     description:
       "This is a multiplayer doodle game where you can draw objects before the other players. It uses socket.io for real-time communication between the clients and the server.",
@@ -62,7 +62,7 @@ export const projects = [
   },
   {
     index: 5,
-    title: "My Waver App",
+    title: "dMessage",
 
     description:
       "One of my first Dapps, this app allows you to send messages to your friends using the Ethereum blockchain. It uses the Rinkeby test network and Metamask for transactions.",
