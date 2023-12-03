@@ -1,6 +1,16 @@
 export const projects = [
   {
     index: 1,
+    title: "Deano",
+
+    description:
+      "Built during EthOnline Global Hackathon'23, Deano's decentralized ecosystem allows vendors to confidently post data annotation jobs. Annotators earn DAN tokens for accurate labeling, benefiting both parties.",
+
+    live: "https://deano.vercel.app/",
+    github: "https://github.com/Shubham-Rasal/Deano",
+  },
+  {
+    index: 1,
     title: "Mindful AI",
 
     description:
@@ -11,7 +21,7 @@ export const projects = [
   },
   {
     index: 1,
-    title: "Decentralized Election System",
+    title: "dElect",
 
     description:
       "Using blockchain, voting process can be made more secure, transparent, immutable, and reliable. This project is a decentralized election system that uses blockchain to store the votes and smart contracts to verify the votes.",
@@ -46,7 +56,7 @@ export const projects = [
     title: "Twitter Clone",
 
     description:
-      "An attempt to build a twitter clone  using React , Vanilla CSS and Twitter API",
+      "An attempt to create the whole of twitter using React and Mongodb. Was successful in replicating the UI and basic backend functionality like posting tweets, liking tweets, etc.",
 
     github: "https://github.com/Shubham-Rasal/coders-dao",
   },
@@ -55,7 +65,7 @@ export const projects = [
     title: "My Waver App",
 
     description:
-      "A simple app to send and receive messages to and from your friends on the blockchain",
+      "One of my first Dapps, this app allows you to send messages to your friends using the Ethereum blockchain. It uses the Rinkeby test network and Metamask for transactions.",
 
     live: "https://my-waver-app.justideas1.repl.co/",
     github: "https://github.com/Shubham-Rasal/my-waver-app",
@@ -73,7 +83,7 @@ export const projects = [
     index: 7,
     title: "Perceptron",
 
-    description: "A simple perceptron built using javascript.",
+    description: "Essentially a single neural node that I have used to demonstate the working of a neural network.",
 
     live: "https://shubham-rasal.github.io/Perceptron/",
     github: "https://github.com/Shubham-Rasal/Perceptron",
