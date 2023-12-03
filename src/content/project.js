@@ -1,6 +1,16 @@
 export const projects = [
   {
     index: 1,
+    title: "Mindful AI",
+
+    description:
+      "Built during a hackathon with my friends, mindful Ai is a comprehensive mental onset detection system tailored for the needs of universities and colleges with a focus on the mental health of students.",
+
+    live: "https://app.supademo.com/demo/2XthgTOFVJYIYPVHqjCtK",
+    github: "https://github.com/Shubham-Rasal/Mindful-AI",
+  },
+  {
+    index: 1,
     title: "Decentralized Election System",
 
     description:
@@ -8,6 +18,17 @@ export const projects = [
 
     live: "https://shubham-rasal.github.io/dElect/",
     github: "https://github.com/shubham-rasal/dElect",
+  },
+ 
+  {
+    index: 3,
+    title: "Multiplayer Doodle Game",
+
+    description:
+      "This is a multiplayer doodle game where you can draw objects before the other players. It uses socket.io for real-time communication between the clients and the server.",
+
+    live: "https://dgame.vercel.app/",
+    github: "https://github.com/Shubham-Rasal/wec22-multiplayer-game",
   },
   {
     index: 2,
@@ -18,16 +39,6 @@ export const projects = [
 
     live: "https://shubham-rasal.github.io/coders-dao/",
     github: "https://github.com/Shubham-Rasal/coders-dao",
-  },
-  {
-    index: 3,
-    title: "Multiplayer Doodle Game",
-
-    description:
-      "This is a multiplayer doodle game where you can draw objects before the other players. It uses socket.io for real-time communication between the clients and the server.",
-
-    live: "https://dgame.vercel.app/",
-    github: "https://github.com/Shubham-Rasal/wec22-multiplayer-game",
   },
 
   {
