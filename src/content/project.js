@@ -1,6 +1,16 @@
 export const projects = [
   {
     index: 1,
+    title: "Harveeco",
+
+    description:
+      "Built during EthIndia Hackathon'23, Harveeco is structured as a DataDAO which allows farmers to monetise and govern their IoT based data. The platform provide zkml proven predictions which is then sold to the big corporations.",
+
+    live: "https://deano.vercel.app/",
+    github: "https://github.com/Shubham-Rasal/Deano",
+  },
+  {
+    index: 1,
     title: "Deano",
 
     description:
@@ -14,7 +24,7 @@ export const projects = [
     title: "Mindful AI",
 
     description:
-      "Built during a hackathon with my friends, mindful Ai is a comprehensive mental onset detection system tailored for the needs of universities and colleges with a focus on the mental health of students.",
+      "Built during a hackathon with my friends, mindful Ai is a comprehensive mental illness onset detection system tailored for the needs of universities and colleges with a focus on the mental health of students.",
 
     live: "https://app.supademo.com/demo/2XthgTOFVJYIYPVHqjCtK",
     github: "https://github.com/Shubham-Rasal/Mindful-AI",
