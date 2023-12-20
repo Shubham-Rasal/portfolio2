@@ -20,4 +20,5 @@ export default defineConfig({
     remarkPlugins: [remarkToc , remarkReadingTime],
     rehypePlugins: [rehypeAccessibleEmojis],
   },
+  site: 'https://bluequbits.vercel.app/'
 });

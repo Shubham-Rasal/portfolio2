@@ -1,31 +1,38 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Shubham Rasal" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/code.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="bg-slate-900 text-slate-50 w-full">
-		<nav
-			class="w-full flex space-x-6 justify-center h-16 items-center text-teal-400 font-semibold text-xl fixed top-0 bg-slate-900 opacity-90"
-		>
-			<a href="/" class="">Home</a>	
-			<a href="/about" class="">About</a>
-			<a href="/projects">Projects</a>
-			<a href="/blog" class="">Blog</a>
-		</nav>
-		<slot />
-		
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Shubham Rasal" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/code.svg" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed for My Website"
+      href="rss.xml"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-slate-900 text-slate-50 w-full">
+    <nav
+      class="w-full flex space-x-6 justify-center h-16 items-center text-teal-400 font-semibold text-xl fixed top-0 bg-slate-900 opacity-90"
+    >
+      <a href="/" class="">Home</a>
+      <a href="/about" class="">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/blog" class="">Blog</a>
+	 
+    </nav>
+    <slot />
+	
+  </body>
 </html>
