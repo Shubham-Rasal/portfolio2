@@ -3,19 +3,29 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About">
-  <div class="flex flex-col mt-16 z-50 items-center">
+  <div class="flex flex-col pt-16 z-50 items-center">
     <h1 class="text-3xl font-bold text-center">About Me</h1>
 
-    <p class="w-1/2 mx-auto p-8 text-center">
+    <p class="lg:w-1/2 lg:text-xl p-8 mx-auto text-center">
       I started coding when I was 16 years old with a simple JAVA calculator for
       my high school project. Did not realise the power of programming until I
-      started doing web development and participating in hackathons.
+      started doing web development and participated in hackathons.
       <br />
-      <br>
-       I have been working on a lot of side projects as it is my primary way of learning. I like the ideas of open source and decentralisation. You
-      can read my blog to understand more about my thought process and my
-      journey. Open to new opportunities and collaborations. Feel free to reach
-      out to me on
+      <br />
+       I have been working on a lot of side projects as it is my primary way of
+      learning. I like the idea of 
+
+     <a class="text-blue-500 font-bold" href="https://github.com/Shubham-Rasal/"> open source</a>
+      
+      and decentralisation. You can
+      read my
+      <a class="text-blue-500 font-bold" href="/blog"> blog</a>
+       to understand more about my thought process and my journey.
+
+      <br />
+      <br />
+       Open to new opportunities and collaborations. Feel free to reach out to
+      me on
 
       <a
         class="text-blue-500 font-bold"
@@ -25,6 +35,15 @@ import Layout from "../layouts/Layout.astro";
       >
         Linkedin
       </a>
+      or 
+      <a
+      class="text-blue-500 font-bold"
+      href="https://twitter.com/bluequbit"
+      target="_blank"
+      class="text-blue-500"
+    >
+      Twitter
+    </a>
     </p>
   </div>
 </Layout>

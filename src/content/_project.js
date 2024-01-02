@@ -63,7 +63,7 @@ export const projects = [
     index: 7,
     title: "Perceptron",
 
-    description: "Visualise a signle layer perceptron.",
+    description: "Visualise a single layer perceptron.",
 
     live: "https://shubham-rasal.github.io/Perceptron/",
     github: "https://github.com/Shubham-Rasal/Perceptron",

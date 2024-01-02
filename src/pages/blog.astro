@@ -16,13 +16,13 @@ function formatDate(date: string) {
 ---
 
 <Layout title="Blog">
-  <div class="flex flex-col mt-16 z-50">
-    <h1 class="text-3xl font-bold text-center">Writing my thoughts</h1>
+  <div class="flex flex-col pt-16 h-screen  z-50 ">
+    <h1 class="text-3xl text-slate-200 font-bold text-center">Writing my thoughts</h1>
 
-    <div class="flex mt-10 flex-wrap w-screen justify-start p-4 md:p-12">
+    <div class="flex flex-1 flex-col mt-10 flex-wrap justify-start p-4 md:p-12">
       {
         posts.map((post) => (
-          <div class="w-full flex  flex-wrap justify-between mx-auto lg:p-1 lg:px-32  md:p-2 px-2 md:px-12 text-base lg:text-xl font-medium text-teal-400 cursor-pointer hover:underline hover:underline-offset-3 hover:text-teal-500 transition duration-300 ease-in-out">
+          <div class="w-full flex  flex-wrap justify-between mx-auto lg:p-1 lg:px-32  md:p-2 px-2 md:px-12 text-base lg:text-xl font-medium  cursor-pointer  hover:text-slate-50 transition duration-300 ease-in-out">
             <div class="w-full lg:w-auto">
               <a href={`/posts/${post.frontmatter.slug}`}>
                 {post.frontmatter.title}
@@ -35,13 +35,9 @@ function formatDate(date: string) {
           </div>
         ))
       }
-      
     </div>
-		<a
-        class="text-center w-screen text-gray-300 text-md lg:text-base mt-2"
-        href="rss.xml"
-      >
-        <!-- <img src="code.svg"  alt="Subscribe to My Website" class="h-6"/> -->RSS
-      </a>
+    <a class="text-right p-8 underline text-gray-300 text-md lg:text-base" href="rss.xml">
+      RSS
+    </a>
   </div>
 </Layout>

@@ -1,13 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Logo from "../components/Logo.jsx";
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const email = data.get("email-address");
+    // Do something with the data
+    console.log(email);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
 ---
 
 <Layout title="Shubham Rasal">
-  <div class="p-2">
+  <div class="p-2 pt-16">
     <main class="relative grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-3">
       <div
-        class="lg:row-span-2 ring-1 ring-white/10 ring-primary/5 bg-secondary shadow-xl shadow-thick rounded-3xl p-8"
+        class="lg:row-span-2 ring-1 dark:hover:ring-white/20 ring-white/10 ring-primary/5 bg-secondary shadow-xl shadow-thick rounded-3xl p-8"
       >
         <div class="relative flex items-center gap-x-4">
           <img
@@ -31,219 +42,61 @@ import Logo from "../components/Logo.jsx";
           Hey, welcome to my site!
         </p>
         <p class="mt-4 text-sm text-zinc-500 font-light lg:text-xl">
-          I'm a digital designer, developer, and surfer from Malibu. In the
-          digital world, I craft interfaces and dive into coding intricacies.
+          I'm a student, developer, and thinker from India. In the digital
+          world, I like creating websites and solve problems.
           <br />
           <br />
-           Beyond screens, I find solace and joy riding waves along Malibu's
-          shores. My life blends tech and nature, coding sessions, and catching
-          waves.
+           Beyond screens, I find solace and joy going on long walks. My life
+          blends tech and philosophy, coding sessions, and catching thoughts.
         </p>
       </div>
       <div
-        class="ring-1 ring-white/10 ring-primary/5 flex flex-col justify-between items-center rounded-3xl shadow-xl shadow-thick p-8 bg-secondary overflow-hidden text-center lg:text-left"
+        class="ring-1 dark:hover:ring-white/20 ring-white/10 ring-primary/5 flex flex-col justify-between items-center rounded-3xl shadow-xl shadow-thick p-8 bg-secondary overflow-hidden text-center lg:text-left"
       >
         <div>
           <p class="text-xl text-primary text-white lg:text-7xl tracking-tight">
             Grab my résumé!
           </p>
           <p class="mt-4 text-sm text-zinc-500 md:max-w-xs lg:max-w-none">
-            Unlock the doors to explore the rich tapestry of my professional
-            journey and accomplishments.
+            I'm currently looking for a part-time job. If you think I'd be a
+            good fit for your team, feel free to reach out to me.
           </p>
         </div>
         <div class="w-full mt-8 md:max-w-xs lg:max-w-none">
-          <button
-            type="button"
-            class="text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary hover:text-white hover:text-primary hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
+          <a
+            href="https://iris.nitk.ac.in/hrms/placement/student_profiles/view_resume/24340?time=1692033510"
+            target="_blank"
+            rel="noopener noreferrer"
+            type="application/pdf"
           >
-            Download my CV
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-download w-4 h-4"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path><path
-                d="M7 11l5 5l5 -5"></path><path d="M12 4l0 12"></path></svg
+            <button
+              type="button"
+              class="text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary hover:text-white hover:text-primary hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
             >
-          </button>
+              Download my CV
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-download w-4 h-4"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path><path
+                  d="M7 11l5 5l5 -5"></path><path d="M12 4l0 12"></path></svg
+              >
+            </button>
+          </a>
         </div>
       </div>
       <div
-        class="ring-1 row-span-2 col-span-1 ring-white/10 ring-primary/5 rounded-3xl justify-between shadow-xl shadow-thick items-center flex flex-col p-8 h-full"
+        class="ring-1 dark:hover:ring-white/20 row-span-2 col-span-1 ring-white/10 ring-primary/5 rounded-3xl justify-between shadow-xl shadow-thick items-center flex flex-col p-8 h-full"
       >
         <div class="w-full">
           <p
             class="text-xl font-normal tracking-tight text-primary text-white lg:text-8xl"
-          >
-            Find me on
-          </p>
-        </div>
-        <div
-          class="grid mt-4 grid-cols-4 md:grid-cols-8 lg:grid-cols-4 gap-y-4 gap-4 justify-center w-full"
-        >
-          <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-mail h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
-              ></path><path d="M3 7l9 6l9 -6"></path></svg
-            >
-          </a>
-          <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-github h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-              ></path></svg
-            >
-          </a>
-          <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-behance h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M3 18v-12h4.5a3 3 0 0 1 0 6a3 3 0 0 1 0 6h-4.5"></path><path
-                d="M3 12l4.5 0"></path><path
-                d="M14 13h7a3.5 3.5 0 0 0 -7 0v2a3.5 3.5 0 0 0 6.64 1"
-              ></path><path d="M16 6l3 0"></path></svg
-            >
-          </a>
-          <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-threads h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -3 7 -5s-1 -5 -7 -5c-2.5 0 -3 1.25 -3 2.5c0 1.5 1 2.5 2.5 2.5c2.5 0 3.5 -1.5 3.5 -5s-2 -4 -3 -4s-1.833 .333 -2.5 1"
-              ></path></svg
-            >
-          </a>
-          <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50 icon-tabler-brand-dribbble"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path
-                d="M9 3.6c5 6 7 10.5 7.5 16.2"></path><path
-                d="M6.4 19c3.5 -3.5 6 -6.5 14.5 -6.4"></path><path
-                d="M3.1 10.75c5 0 9.814 -.38 15.314 -5"></path></svg
-            >
-          </a>
-          <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50 icon-tabler-brand-x"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path
-                d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg
-            >
-          </a>
-          <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50 icon-tabler-brand-linkedin"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-              ></path><path d="M8 11l0 5"></path><path d="M8 8l0 .01"
-              ></path><path d="M12 16l0 -5"></path><path
-                d="M16 16v-3a2 2 0 0 0 -4 0"></path></svg
-            >
-          </a><a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50 icon-tabler-brand-facebook"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
-              ></path></svg
-            >
-          </a>
-        </div>
-      </div>
-      <div
-        class="ring-1 row-span-1 col-span-1 ring-white/10 ring-primary/5 rounded-3xl justify-between shadow-xl shadow-thick items-center flex flex-col p-8 h-full"
-      >
-        <div class="w-full">
-          <p
-            class="text-xl font-normal tracking-tight text-primary text-white lg:text-6xl"
           >
             My Tech Stack
           </p>
@@ -252,12 +105,184 @@ import Logo from "../components/Logo.jsx";
           class="grid mt-4 grid-cols-4 md:grid-cols-8 lg:grid-cols-4 gap-y-4 gap-4 justify-center w-full"
         >
           <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
+            href="https://ethereum.org/en/"
+            target="_blank"
+            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-14 w-14"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-mail h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-currency-ethereum h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M6 12l6 -9l6 9l-6 9z"></path><path d="M6 12l6 -3l6 3l-6 2z"
+              ></path></svg
+            >
+          </a>
+          <a
+            href="https://nextjs.org/"
+            target="_blank"
+            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-14 w-14"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-nextjs h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993"></path><path
+                d="M15 12v-3"></path></svg
+            >
+          </a>
+          <a
+            href="https://go.dev/"
+            target="_blank"
+            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-14 w-14"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-golang h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M15.695 14.305c1.061 1.06 2.953 .888 4.226 -.384c1.272 -1.273 1.444 -3.165 .384 -4.226c-1.061 -1.06 -2.953 -.888 -4.226 .384c-1.272 1.273 -1.444 3.165 -.384 4.226z"
+              ></path><path
+                d="M12.68 9.233c-1.084 -.497 -2.545 -.191 -3.591 .846c-1.284 1.273 -1.457 3.165 -.388 4.226c1.07 1.06 2.978 .888 4.261 -.384a3.669 3.669 0 0 0 1.038 -1.921h-2.427"
+              ></path><path d="M5.5 15h-1.5"></path><path d="M6 9h-2"
+              ></path><path d="M5 12h-3"></path></svg
+            >
+          </a>
+          <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-14 w-14"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-tailwind h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z"
+              ></path></svg
+            >
+          </a>
+          <a
+            href="https://www.docker.com/"
+            target="_blank"
+            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-14 w-14"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-docker h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M22 12.54c-1.804 -.345 -2.701 -1.08 -3.523 -2.94c-.487 .696 -1.102 1.568 -.92 2.4c.028 .238 -.32 1 -.557 1h-14c0 5.208 3.164 7 6.196 7c4.124 .022 7.828 -1.376 9.854 -5c1.146 -.101 2.296 -1.505 2.95 -2.46z"
+              ></path><path d="M5 10h3v3h-3z"></path><path d="M8 10h3v3h-3z"
+              ></path><path d="M11 10h3v3h-3z"></path><path d="M8 7h3v3h-3z"
+              ></path><path d="M11 7h3v3h-3z"></path><path d="M11 4h3v3h-3z"
+              ></path><path d="M4.571 18c1.5 0 2.047 -.074 2.958 -.78"
+              ></path><path d="M10 16l0 .01"></path></svg
+            >
+          </a>
+          <a
+            href="https://www.typescriptlang.org/"
+            target="_blank"
+            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-14 w-14"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-typescript h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M15 17.5c.32 .32 .754 .5 1.207 .5h.543c.69 0 1.25 -.56 1.25 -1.25v-.25a1.5 1.5 0 0 0 -1.5 -1.5a1.5 1.5 0 0 1 -1.5 -1.5v-.25c0 -.69 .56 -1.25 1.25 -1.25h.543c.453 0 .887 .18 1.207 .5"
+              ></path><path d="M9 12h4"></path><path d="M11 12v6"></path><path
+                d="M21 19v-14a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2 -2z"
+              ></path></svg
+            >
+          </a>
+          <div
+            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-14 w-14"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-sql h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M12 8a2 2 0 0 1 2 2v4a2 2 0 1 1 -4 0v-4a2 2 0 0 1 2 -2z"
+              ></path><path d="M17 8v8h4"></path><path d="M13 15l1 1"
+              ></path><path
+                d="M3 15a1 1 0 0 0 1 1h2a1 1 0 0 0 1 -1v-2a1 1 0 0 0 -1 -1h-2a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1"
+              ></path></svg
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="ring-1 dark:hover:ring-white/20 row-span-1 col-span-1 ring-white/10 ring-primary/5 rounded-3xl justify-between shadow-xl shadow-thick items-center flex flex-col p-8 h-full"
+      >
+        <div class="w-full">
+          <p
+            class="text-xl font-normal tracking-tight text-primary text-white lg:text-6xl"
+          >
+            Find me on
+          </p>
+        </div>
+        <div
+          class="grid mt-4 grid-cols-4 md:grid-cols-8 lg:grid-cols-4 gap-y-4 gap-4 justify-center w-full"
+        >
+          <a
+            href="mailto:bluequbits@gmail.com"
+            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-14 w-14"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-mail h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
               viewBox="0 0 24 24"
               stroke-width="0.8"
               stroke="currentColor"
@@ -270,12 +295,13 @@ import Logo from "../components/Logo.jsx";
             >
           </a>
           <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
+            href="https://github.com/Shubham-Rasal"
+            target="_blank"
+            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-14 w-14"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-github h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-brand-github h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
               viewBox="0 0 24 24"
               stroke-width="0.8"
               stroke="currentColor"
@@ -288,72 +314,40 @@ import Logo from "../components/Logo.jsx";
             >
           </a>
           <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
+            href="https://leetcode.com/_shubham007/"
+            target="_blank"
+            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-14 w-14"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-behance h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-brand-leetcode h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
-              stroke-width="0.8"
+              stroke-width="2"
               stroke="currentColor"
               fill="none"
               stroke-linecap="round"
               stroke-linejoin="round"
               ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M3 18v-12h4.5a3 3 0 0 1 0 6a3 3 0 0 1 0 6h-4.5"></path><path
-                d="M3 12l4.5 0"></path><path
-                d="M14 13h7a3.5 3.5 0 0 0 -7 0v2a3.5 3.5 0 0 0 6.64 1"
-              ></path><path d="M16 6l3 0"></path></svg
-            >
-          </a>
-          <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-threads h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -3 7 -5s-1 -5 -7 -5c-2.5 0 -3 1.25 -3 2.5c0 1.5 1 2.5 2.5 2.5c2.5 0 3.5 -1.5 3.5 -5s-2 -4 -3 -4s-1.833 .333 -2.5 1"
+                d="M12 13h7.5"></path><path d="M9.424 7.268l4.999 -4.999"
+              ></path><path
+                d="M16.633 16.644l-2.402 2.415a3.189 3.189 0 0 1 -4.524 0l-3.77 -3.787a3.223 3.223 0 0 1 0 -4.544l3.77 -3.787a3.189 3.189 0 0 1 4.524 0l2.302 2.313"
               ></path></svg
             >
           </a>
           <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
+            href="https://twitter.com/bluequbit"
+            target="_blank"
+            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-14 w-14"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50 icon-tabler-brand-dribbble"
+              class="icon icon-tabler icon-tabler-brand-x h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path
-                d="M9 3.6c5 6 7 10.5 7.5 16.2"></path><path
-                d="M6.4 19c3.5 -3.5 6 -6.5 14.5 -6.4"></path><path
-                d="M3.1 10.75c5 0 9.814 -.38 15.314 -5"></path></svg
-            >
-          </a>
-          <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50 icon-tabler-brand-x"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
+              stroke-width="2"
               stroke="currentColor"
               fill="none"
               stroke-linecap="round"
@@ -363,82 +357,38 @@ import Logo from "../components/Logo.jsx";
                 d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg
             >
           </a>
-          <a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50 icon-tabler-brand-linkedin"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-              ></path><path d="M8 11l0 5"></path><path d="M8 8l0 .01"
-              ></path><path d="M12 16l0 -5"></path><path
-                d="M16 16v-3a2 2 0 0 0 -4 0"></path></svg
-            >
-          </a><a
-            href="#_"
-            class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-12 w-12"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler h-6 w-6 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50 icon-tabler-brand-facebook"
-              viewBox="0 0 24 24"
-              stroke-width="0.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
-              ></path></svg
-            >
-          </a>
         </div>
       </div>
 
       <div
-        class="ring-1 dark:ring-white/10 ring-primary/5 flex flex-col p-8 h-full justify-center items-center rounded-3xl overflow-hidden relative lg:col-span-2 lg:row-start-3 shadow-xl dark:shadow-thick"
+        class="ring-1 dark:ring-white/10 ring-primary/5 flex flex-col p-8 h-full justify-center items-center rounded-3xl overflow-hidden relative lg:col-span-2 lg:row-start-3 shadow-xl dark:shadow-thick dark:hover:ring-white/20"
       >
         <div class="relative p-8 text-center w-full">
           <p
             class="text-xl tracking-tight font-medium text-primary dark:text-white md:text-6xl"
           >
             Subscribe <span class="lg:block">to my newsletter</span>
-          </p>
-          <form class="mt-6 sm:flex w-full lg:max-w-sm mx-auto">
-            <label for="email-address" class="sr-only">Email address</label>
-            <input
-              type="email"
-              name="email-address"
-              id="email-address"
-              autocomplete="email"
-              required=""
-              class="block w-full h-12 px-4 py-2 text-sm ring-1 ring-primary/5 rounded-lg appearance-none focus:ring-white/20 focus:border-zinc-300 f focus:outline-none focus:ring-indigo-500 sm:text-sm"
-              placeholder="Enter your email"
-            />
-            <div class="mt-4 sm:ml-2 sm:mt-0 sm:flex-shrink-0">
-              <button
-                type="submit"
-                class="text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg dark:hover:text-white hover:text-primary dark:hover:bg-white/5 flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
-                >Subscribe</button
-              >
+            <div
+              class="mt-6 sm:flex w-full lg:max-w-sm mx-auto items-center justify-center"
+            >
+              <iframe
+                src="https://embeds.beehiiv.com/dd6d55a1-fe45-4f15-b0b4-0c56a16e530d?slim=true"
+                data-test-id="beehiiv-embed"
+                height="52"
+                frameborder="0"
+                scrolling="no"
+                style="margin: 0; border-radius: 0px !important; background-color: transparent;"
+              ></iframe>
             </div>
-          </form>
+          </p>
         </div>
-      </div>
-      <div
-        class="ring-1 lg:row-start-3 items-center h-full flex p-8 flex-col justify-center hover:ring-primary/5 dark:hover:ring-white/20 dark:ring-white/10 ring-primary/5 relative rounded-3xl overflow-hidden dark:bg-secondary shadow-xl dark:shadow-thick"
-      >
-      <p class="text-xl text-primary dark:text-white lg:text-2xl mt-6">
-        Yet to decide what to put in here.
-      </p>
+        <div
+          class="ring-1 lg:row-start-3 items-center h-full flex p-8 flex-col justify-center hover:ring-primary/5 dark:hover:ring-white/20 dark:ring-white/10 ring-primary/5 relative rounded-3xl overflow-hidden dark:bg-secondary shadow-xl dark:shadow-thick"
+        >
+          <p class="text-xl text-primary dark:text-white lg:text-2xl mt-6">
+            Yet to decide what to put in here.
+          </p>
+        </div>
       </div>
     </main>
   </div>
