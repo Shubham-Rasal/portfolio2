@@ -17,12 +17,12 @@ function formatDate(date: string) {
 
 <Layout title="Blog">
   <div class="flex flex-col pt-16 h-screen  z-50 ">
-    <h1 class="text-3xl text-slate-200 font-bold text-center">Writing my thoughts</h1>
+    <h1 class="text-3xl dark:text-slate-200 font-bold text-center">Writing my thoughts</h1>
 
     <div class="flex flex-1 flex-col mt-10 flex-wrap justify-start p-4 md:p-12">
       {
         posts.map((post) => (
-          <div class="w-full flex  flex-wrap justify-between mx-auto lg:p-1 lg:px-32  md:p-2 px-2 md:px-12 text-base lg:text-xl font-medium  cursor-pointer  hover:text-slate-50 transition duration-300 ease-in-out">
+          <div class="w-full flex  flex-wrap justify-between mx-auto lg:p-1 lg:px-32  md:p-2 px-2 md:px-12 text-base lg:text-xl font-medium  cursor-pointer hover:text-slate-400  dark:hover:text-slate-50 transition duration-300 ease-in-out">
             <div class="w-full lg:w-auto">
               <a href={`/posts/${post.frontmatter.slug}`}>
                 {post.frontmatter.title}

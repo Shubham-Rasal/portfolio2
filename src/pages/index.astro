@@ -27,7 +27,7 @@ if (Astro.request.method === "POST") {
             class="h-10 w-10 rounded-full ring-1 ring-white/10 ring-primary/5"
           />
           <div class="text-sm leading-6">
-            <p class="font-semibold text-primary text-white">
+            <p class="font-semibold text-primary dark:text-white">
               <a href="#">
                 <span class="absolute inset-0"></span>
                  Shubham Rasal
@@ -37,7 +37,7 @@ if (Astro.request.method === "POST") {
           </div>
         </div>
         <p
-          class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary text-white"
+          class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white"
         >
           Hey, welcome to my site!
         </p>
@@ -54,7 +54,9 @@ if (Astro.request.method === "POST") {
         class="ring-1 dark:hover:ring-white/20 ring-white/10 ring-primary/5 flex flex-col justify-between items-center rounded-3xl shadow-xl shadow-thick p-8 bg-secondary overflow-hidden text-center lg:text-left"
       >
         <div>
-          <p class="text-xl text-primary text-white lg:text-7xl tracking-tight">
+          <p
+            class="text-xl text-primary dark:text-white lg:text-7xl tracking-tight"
+          >
             Grab my résumé!
           </p>
           <p class="mt-4 text-sm text-zinc-500 md:max-w-xs lg:max-w-none">
@@ -71,7 +73,7 @@ if (Astro.request.method === "POST") {
           >
             <button
               type="button"
-              class="text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary hover:text-white hover:text-primary hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
+              class="text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary hover:dark:text-white hover:text-primary hover:bg-slate-100 dark:hover:bg-slate-800 hover:bg-primary/10 dark:text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
             >
               Download my CV
               <svg
@@ -96,11 +98,19 @@ if (Astro.request.method === "POST") {
       >
         <div class="w-full">
           <p
-            class="text-xl font-normal tracking-tight text-primary text-white lg:text-8xl"
+            class="text-xl font-normal tracking-tight text-primary dark:text-white lg:text-8xl"
           >
             My Tech Stack
           </p>
         </div>
+        <p class="mt-4 text-sm text-zinc-500 font-light lg:text-xl">
+          My tech stack is a mix of frontend and backend technologies. I love to
+          work with React, Next.js, and Tailwind CSS.
+          <br />
+          <br />
+           I also have experience with Go, Docker, and PostgreSQL. Also I write
+          smart contracts in Solidity.
+        </p>
         <div
           class="grid mt-4 grid-cols-4 md:grid-cols-8 lg:grid-cols-4 gap-y-4 gap-4 justify-center w-full"
         >
@@ -111,7 +121,7 @@ if (Astro.request.method === "POST") {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-currency-ethereum h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-currency-ethereum h-8 w-8 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -132,7 +142,7 @@ if (Astro.request.method === "POST") {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-nextjs h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-brand-nextjs h-8 w-8 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -153,7 +163,7 @@ if (Astro.request.method === "POST") {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-golang h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-brand-golang h-8 w-8 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -177,7 +187,7 @@ if (Astro.request.method === "POST") {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-tailwind h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-brand-tailwind h-8 w-8 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -198,7 +208,7 @@ if (Astro.request.method === "POST") {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-docker h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-brand-docker h-8 w-8 group-hover:scale-125 duration-300 text-primary dark:dark:text-white group-hover text-primary:dark:text-white/50"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -223,7 +233,7 @@ if (Astro.request.method === "POST") {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-typescript h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-brand-typescript h-8 w-8 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -244,7 +254,7 @@ if (Astro.request.method === "POST") {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-sql h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-sql h-8 w-8 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -268,7 +278,7 @@ if (Astro.request.method === "POST") {
       >
         <div class="w-full">
           <p
-            class="text-xl font-normal tracking-tight text-primary text-white lg:text-6xl"
+            class="text-xl font-normal tracking-tight text-primary dark:text-white lg:text-6xl"
           >
             Find me on
           </p>
@@ -282,9 +292,11 @@ if (Astro.request.method === "POST") {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-mail h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-mail h-8 w-8 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
-              stroke-width="0.8"
+              stroke-width="2"
               stroke="currentColor"
               fill="none"
               stroke-linecap="round"
@@ -301,9 +313,11 @@ if (Astro.request.method === "POST") {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-github h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-brand-github h-8 w-8 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
-              stroke-width="0.8"
+              stroke-width="2"
               stroke="currentColor"
               fill="none"
               stroke-linecap="round"
@@ -320,7 +334,7 @@ if (Astro.request.method === "POST") {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-leetcode h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-brand-leetcode h-8 w-8 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -343,7 +357,7 @@ if (Astro.request.method === "POST") {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-x h-8 w-8 group-hover:scale-125 duration-300 text-primary text-white group-hover text-primary:text-white/50"
+              class="icon icon-tabler icon-tabler-brand-x h-8 w-8 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -361,7 +375,7 @@ if (Astro.request.method === "POST") {
       </div>
 
       <div
-        class="ring-1 dark:ring-white/10 ring-primary/5 flex flex-col p-8 h-full justify-center items-center rounded-3xl overflow-hidden relative lg:col-span-2 lg:row-start-3 shadow-xl dark:shadow-thick dark:hover:ring-white/20"
+        class="dark:ring-1 dark:ring-white/10 dark:ring-primary/5 flex flex-col p-8 h-full justify-center items-center rounded-3xl overflow-hidden relative lg:col-span-2 lg:row-start-3 shadow-2xl dark:hover:ring-white/20"
       >
         <div class="relative p-8 text-center w-full">
           <p
@@ -383,9 +397,9 @@ if (Astro.request.method === "POST") {
           </p>
         </div>
         <div
-          class="ring-1 lg:row-start-3 items-center h-full flex p-8 flex-col justify-center hover:ring-primary/5 dark:hover:ring-white/20 dark:ring-white/10 ring-primary/5 relative rounded-3xl overflow-hidden dark:bg-secondary shadow-xl dark:shadow-thick"
+          class="dark:ring-1 lg:row-start-3 items-center h-full flex p-8 flex-col justify-center hover:ring-primary/5 dark:hover:ring-white/20 dark:ring-white/10 ring-primary/5 relative rounded-3xl shadow-thick p-8 bg-secondary overflow-hidden text-center lg:text-left shadow-teal-100 shadow-xl"
         >
-          <p class="text-xl text-primary dark:text-white lg:text-2xl mt-6">
+          <p class="text-xl text-primary dark:dark:text-white lg:text-2xl mt-6">
             Yet to decide what to put in here.
           </p>
         </div>
