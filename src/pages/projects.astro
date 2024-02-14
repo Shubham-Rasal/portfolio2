@@ -2,32 +2,72 @@
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import { projects } from "../content/_project";
+import { BentoGrid } from "../components/ui/bento-grid";
+import { BentoGridSecondDemo } from "../components/BentoGrid";
 type Project = {
-    index: number;
-    title: string;
-    description: string;
-    github: string;
-    live?: string;
+  index: number;
+  title: string;
+  description: string;
+  github: string;
+  live?: string;
 };
 
 //type cast to avoid type errors
 const p: Project[] = projects;
 // console.log(p);
-
-
-
 ---
 
 <Layout title="Projects">
-    <div class="flex flex-col pt-16 z-50">
-     
-
-        <div class="flex flex-col mt-10  w-full justify-center">
-            {p.map((project) => <Card title={project.title} description={project.description} github={project.github} 
-            live={project.live}  index={project.index}
-            />)}
-        </div>
-    </div>
+  <main
+    class="flex flex-col items-center justify-center flex-1 p-2 pt-20 text-center"
+  >
+    <section>
+      <BentoGridSecondDemo />
+    </section>
+    <section
+      class="flex w-3/4 mt-4 mx-auto items-start text-start min-h-0 flex-col gap-y-3 print-force-new-page scroll-mb-16"
+      id="hackathons"
+    >
+      <h2 class="text-xl font-bold">Hackathons</h2><ul
+        class="mb-4 ml-4 divide-y divide-dotted border-l"
+      >
+        <li class="relative ml-10 py-4">
+          <div class="flex flex-1 flex-col justify-start gap-0.5">
+            <time class="text-xs text-gray-500 underline">December, 2023</time
+            ><h2 class="font-semibold leading-none">ETH India</h2><p
+              class="text-sm text-gray-500 underline"
+            >
+              Bangalore, India
+            </p><div
+              class="prose dark:prose-invert text-sm text-muted-foreground"
+            >
+              <p>
+                Built Harveeco, a product which aims to improve the lives of
+                Indian farmers by leveraging the power of Web3 technologies,
+                Machine Learning, and the Internet of Things (IoT). 💫
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="relative ml-10 py-4">
+          <div class="flex flex-1 flex-col justify-start gap-0.5">
+            <time class="text-xs text-gray-500 underline"
+              >October, 2023</time
+            ><h2 class="font-semibold leading-none">ETH Online</h2><p
+              class="text-sm text-gray-500 underline"
+            >
+              Remote, Online
+            </p><div
+              class="prose dark:prose-invert text-sm text-muted-foreground"
+            >
+              <p>
+                Developed a decentralised annotation platform that won the
+                track prize for best use of Sismo and Tableland.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
 </Layout>
-
-
