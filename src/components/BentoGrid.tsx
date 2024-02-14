@@ -6,6 +6,19 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
+import { projects } from "../content/_project";
+
+type Project = {
+  index: number;
+  title: string;
+  description: string;
+  github: string;
+  live?: string;
+};
+
+//type cast to avoid type errors
+const p: Project[] = projects;
+// console.log(p);
 
 export function BentoGridSecondDemo() {
   return (
