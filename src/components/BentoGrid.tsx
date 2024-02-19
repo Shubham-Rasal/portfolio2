@@ -24,7 +24,7 @@ console.log(p);
 
 export function BentoGridSecondDemo() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+    <BentoGrid className="max-w-4xl mx-auto">
       {p.map((project) => (
         <BentoGridItem
           key={project.index}
