@@ -3,8 +3,8 @@ export const projects = [
     index: 1,
     title: "Harveeco",
 
-    description:
-      "A Farmer's DataDAO.",
+    description: 
+      "A Farmer's DataDAO. A decentralised application for farmers to store and share their data.",
 
     live: "https://deano.vercel.app/",
     github: "https://github.com/Shubham-Rasal/Deano",

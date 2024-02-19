@@ -13,16 +13,13 @@ type Project = {
 
 //type cast to avoid type errors
 const p: Project[] = projects;
-// console.log(p);
+console.log(p);
 ---
 
 <Layout title="Projects">
   <main
     class="flex flex-col items-center justify-center flex-1 p-2 pt-20 text-center"
   >
-    <section>
-      <BentoGridSecondDemo />
-    </section>
     <section
       class="flex w-3/4 mt-4 mx-auto items-start text-start min-h-0 flex-col gap-y-3 print-force-new-page scroll-mb-16"
       id="hackathons"
@@ -50,8 +47,7 @@ const p: Project[] = projects;
         </li>
         <li class="relative ml-10 py-4">
           <div class="flex flex-1 flex-col justify-start gap-0.5">
-            <time class="text-xs text-gray-500 underline"
-              >October, 2023</time
+            <time class="text-xs text-gray-500 underline">October, 2023</time
             ><h2 class="font-semibold leading-none">ETH Online</h2><p
               class="text-sm text-gray-500 underline"
             >
@@ -60,13 +56,20 @@ const p: Project[] = projects;
               class="prose dark:prose-invert text-sm text-muted-foreground"
             >
               <p>
-                Developed a decentralised annotation platform that won the
-                track prize for best use of Sismo and Tableland.
+                Developed a decentralised annotation platform that won the track
+                prize for best use of Sismo and Tableland.
               </p>
             </div>
           </div>
         </li>
       </ul>
+    </section>
+    <section
+      class="flex w-3/4 mt-4 mx-auto items-start text-start min-h-0 flex-col gap-y-3 print-force-new-page scroll-mb-16"
+      id="hackathons"
+    >
+      <h2 class="text-xl font-bold">Side Projects</h2>
+      <BentoGridSecondDemo />
     </section>
   </main>
 </Layout>
