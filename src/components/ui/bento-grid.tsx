@@ -1,6 +1,6 @@
 import { IconSignature, IconTableColumn } from "@tabler/icons-react";
 import { cn } from "../../utils/cn";
-import type { Project } from "../BentoGrid";
+import type { Project } from "../Projects";
 
 export const BentoGrid = ({
   className,

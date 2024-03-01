@@ -7,7 +7,6 @@ export function GET(context) {
     eager: true,
   });
   const posts = Object.values(postImportResult);
-  console.log(posts);
 
   return rss({
     // `<title>` field in output xml

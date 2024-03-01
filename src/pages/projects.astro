@@ -2,7 +2,7 @@
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import { projects } from "../content/_project";
-import { BentoGridSecondDemo } from "../components/BentoGrid";
+import { Projects as ProjectsComponent } from "../components/Projects";
 import HackathonTimeline from "../components/HackathonTimeline";
 type Project = {
   index: number;
@@ -14,7 +14,6 @@ type Project = {
 
 //type cast to avoid type errors
 const p: Project[] = projects;
-console.log(p);
 ---
 
 <Layout title="Projects">
@@ -33,7 +32,8 @@ console.log(p);
       id="projects"
     >
       <h2 class="text-xl font-bold">Side Projects</h2>
-      <BentoGridSecondDemo />
+      <ProjectsComponent />
     </section>
   </main>
 </Layout>
+../components/Projects

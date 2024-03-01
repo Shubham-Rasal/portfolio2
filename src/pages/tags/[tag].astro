@@ -17,7 +17,6 @@ const { posts } = Astro.props;
 const filteredPosts = posts.filter((post : any) =>
     post.frontmatter.tags?.includes(tag),
 );
-console.log(filteredPosts);
 ---
 
 <p>Posts tagged with {tag}</p>
