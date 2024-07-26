@@ -10,7 +10,7 @@ export const projects = [
     github: "https://github.com/Shubham-Rasal/Deano",
   },
   {
-    index: 1,
+    index: 2,
     title: "Deano",
 
     description:
@@ -20,7 +20,7 @@ export const projects = [
     github: "https://github.com/Shubham-Rasal/Deano",
   },
   {
-    index: 1,
+    index: 3,
     title: "Mindful AI",
 
     description:
@@ -30,7 +30,7 @@ export const projects = [
     github: "https://github.com/Shubham-Rasal/Mindful-AI",
   },
   {
-    index: 3,
+    index: 4,
     title: "dGame",
 
     description:
@@ -40,7 +40,7 @@ export const projects = [
     github: "https://github.com/Shubham-Rasal/wec22-multiplayer-game",
   },
   {
-    index: 6,
+    index: 5,
     title: "iNeural",
 
     description:
@@ -49,7 +49,7 @@ export const projects = [
     github: "https://github.com/Shubham-Rasal/iNeural",
   },
   {
-    index: 7,
+    index: 6,
     title: "Perceptron",
 
     description: "Visualise a single layer perceptron.",
@@ -58,7 +58,7 @@ export const projects = [
     github: "https://github.com/Shubham-Rasal/Perceptron",
   },
   {
-    index: 2,
+    index: 7,
     title: "CipherCraft",
     description: "A Decentralised Hub for federated model training on access controlled private datasets.",
 
@@ -66,11 +66,20 @@ export const projects = [
     github: "https://github.com/Shubham-Rasal/CipherCraft",
   },
   {
-    index: 2,
+    index: 8,
     title: "SMEasy",
     description: "Automatic Government Scheme Recommendation and AI based Loan Approval",
 
     live: "https://smeasy.vercel.app/",
     github: "https://github.com/Shubham-Rasal/SMEasy",
   },
+  {
+    index: 8,
+    title: "Flow Forge",
+    description: "Automation Planner",
+
+    live: "https://flowforge.vercel.app/",
+    github: "https://github.com/Shubham-Rasal/flow-forge",
+  },
+
 ];

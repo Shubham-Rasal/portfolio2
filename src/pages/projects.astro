@@ -21,18 +21,18 @@ const p: Project[] = projects;
     class="flex flex-col items-center justify-center flex-1 p-2 pt-20 text-center"
   >
     <section
-      class="flex w-3/4 mt-4 mx-auto items-start text-start min-h-0 flex-col gap-y-3 print-force-new-page scroll-mb-16"
-      id="hackathons"
-    >
-      <h2 class="text-xl font-bold">Hackathons</h2>
-      <HackathonTimeline />
-    </section>
-    <section
-      class="flex w-3/4 mt-4 mx-auto items-start text-start min-h-0 flex-col gap-y-3 print-force-new-page scroll-mb-16"
+      class="flex mx-2 mt-4 items-start text-start min-h-0 flex-col gap-y-3 print-force-new-page scroll-mb-16"
       id="projects"
     >
       <h2 class="text-xl font-bold">Side Projects</h2>
       <ProjectsComponent />
+    </section>
+    <section
+      class="flex mx-2 mt-8  items-start text-start min-h-0 flex-col gap-y-3 print-force-new-page scroll-mb-16"
+      id="hackathons"
+    >
+      <h2 class="text-xl font-bold">Hackathons</h2>
+      <HackathonTimeline />
     </section>
   </main>
 </Layout>
