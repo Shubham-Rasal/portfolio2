@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
+import tailwind from '@astrojs/tailwind';
 import vercel from '@astrojs/vercel/serverless';
 import react from "@astrojs/react";
 import remarkToc from 'remark-toc';
@@ -8,7 +8,7 @@ import { remarkReadingTime } from './remark-reading-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react()],
+  integrations: [react(), tailwind()],
   output: 'hybrid',
   adapter: vercel({
     webAnalytics: {
@@ -17,7 +17,7 @@ export default defineConfig({
   }),
   markdown: {
     // Applied to .md and .mdx files
-    remarkPlugins: [remarkToc , remarkReadingTime],
+    remarkPlugins: [remarkToc, remarkReadingTime],
     rehypePlugins: [rehypeAccessibleEmojis],
   },
   site: 'https://bluequbits.vercel.app/'

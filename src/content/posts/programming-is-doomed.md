@@ -5,7 +5,7 @@ date: 2023-11-10
 author: Shubham Rasal
 tags: [programming, ai, philosophy]
 ---
-
+[Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing) algorithm.
 ## Introduction
 
 Today I had an assignment in a Data structures and Algorithms Lab to implement integer multiplication using following:
